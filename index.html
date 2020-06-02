@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebuilding Twitter</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- ** LEFT SIDEBAR ** -->
+    <aside class="navigation">
+
+      <!-- TOP -->
+      <div class="top">
+
+        <!-- Brand -->
+        <div class="brand">
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="active">
+                <i class="fas fa-home"></i> <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-hashtag"></i> <span>Explore</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="far fa-bell"></i> <span>Notifications</span>
+              </a>
+            <li>
+              <a href="#">
+                <i class="fas fa-envelope"></i> <span>Messages</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="far fa-bookmark"></i> <span>Bookmarks</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-list"></i> <span>Lists</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="far fa-user"></i> <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="far fa-comment-dots"></i> <span>More</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Tweet Button -->
+        <button class="btn tweet">Tweet</button>
+      </div>
+
+      <!-- BOTTOM -->
+      <div class="bottom">
+        <a href="#" class="profile-container">
+          <div class="profile">
+            <img src="https://placebeard.it/320x320" alt="Jesse James Burton" />
+            <div class="profile__name">
+              <strong>Jesse James B...</strong>
+              <span>@BurtonMedia</span>
+            </div>
+          </div>
+          <div class="arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ** MAIN ** -->
+    <div class="main">
+
+      <div class="main-header">
+        <span>
+          <a href="#">Home</a>
+        </span>
+        <span>
+          <a href="#" class="hover-link"><i class="far fa-star"></i></a>
+        </span>
+      </div>
+
+      <form class="tweet-form">
+        <div class="tweet-image">
+          <img class="profile-image" src="https://placebeard.it/320x320" alt="Jesse James Burton" />
+        </div>
+        <div class="tweet-input">
+          <input type="text" placeholder="What's Happening?" />
+          <div class="tweet-buttons">
+            <div class="tweet-icons">
+              <a href="#" class="hover-link"><i class="far fa-image"></i></a>
+              <a href="#" class="hover-link"><i class="fas fa-poll"></i></a>
+              <a href="#" class="hover-link"><i class="far fa-smile-beam"></i></a>
+              <a href="#" class="hover-link"><i class="fas fa-calendar-day" title="Calendar"></i></a>
+            </div>
+            <button class="btn" disabled>Tweet</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- TWEETS -->
+      <div class="tweet">
+        <div class="tweet-image">
+          <img class="profile-image" src="https://placebeard.it/320x320?tweet" alt="Jesse James Burton" />
+        </div>
+        <div class="tweet-content">
+          <header class="tweet-header">
+            <div class="author-info">
+              <a href="#" class="author-name">Jesse J Burton</a>
+              <span class="author-tag">@BurtonMedia</span>
+              <span class="author-time">. 9m</span>
+            </div>
+            <div class="dropdown">
+              <a href="#">
+                <i class="fas fa-caret-down"></i>
+              </a>
+            </div>
+          </header>
+          <div class="tweet-body">
+            <p>Nunc consectetur nulla odio, vel facilisis ex egestas non. Morbi eu tortor cursus, fringilla velit eget,
+              osuere diam. Proin ante lacus, suscipit id arcu ac, pulvinar congue leo. Donec a aliquam tortor.</p>
+          </div>
+          <footer class="tweet-footer">
+            icons
+          </footer>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ** RiGHT SIDEBAR ** -->
+    <aside class="sidebar"></aside>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

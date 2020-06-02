@@ -122,3 +122,8 @@ Calendar
 
 ### Back Arrow:
 `<i class="fas fa-arrow-left"></i>`
+
+## Refactoring (TODO)
+
+* Adjust the Navbar profile image to use profile image class
+* Common classes for main content
