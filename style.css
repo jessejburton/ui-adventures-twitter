@@ -1,13 +1,13 @@
 :root {
   --white: #FFFFFF;
   --black: #000000;
-  --blue: #1DA1F2;
   --blues: #E8F5FE;
   --blued: rgb(26, 145, 218);
-  --greytext: rgb(159, 159, 161);
-  --grey: rgb(230, 236, 240);
-  --greys: rgb(223, 223, 223);
+  --blue: #1DA1F2;
+  --greytext: rgb(116, 116, 117);
+  --greys: rgb(236, 236, 236);
   --greyhover: rgb(242, 246, 248);
+  --grey: rgb(244, 248, 250);
   --green: #31c674;
   --greens: #e7f9ef;
   --red: #e0245e;
@@ -354,12 +354,117 @@ main a {
 
 }
 
-
 /* RIGHT SIDEBAR */
 .sidebar {
   position: relative;
   height: 100vh;
   width: 350px;
+  padding-left: 3.5rem;
+}
+
+.search-form {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.search-form input[type=search] {
+  width: 100%;
+  border-radius: 3rem;
+  background-color: var(--grey);
+  color: var(var(--greytext));
+  border: 1px solid transparent;
+  padding: 1.2rem 2rem 1.2rem 4.5rem;
+  font-size: 1.5rem;
+}
+
+.search-form input[type=search]:focus {
+  outline: none;
+  border: 1px solid var(--blue);
+  background-color: white;
+}
+
+.search-form::before {
+  content: '\f002';
+  font-family: "Font Awesome 6 Free";
+  font-size: 1.8rem;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+}
+
+.whats-happening h4 {
+  background-color: var(--grey);
+  padding: 1rem 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom: 1px solid var(--greys);
+}
+
+.happening {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  background-color: var(--grey);
+  border-bottom: 1px solid var(--greys);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.happening:hover {
+  background-color: var(--greys);
+}
+
+.happening .meta {
+  font-size: 1.2rem;
+  color: var(--greytext);
+}
+
+.happening .text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  padding: .3rem 0;
+}
+
+.happening .sub-meta {
+  font-size: 1.5rem;
+  color: var(--greytext);
+}
+
+.happening-left {
+  padding-right: 1rem;
+}
+
+.happening-image {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.happening-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.happening-footer a {
+  background-color: var(--grey);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  padding: 1rem 1rem 1.5rem 1rem;
+  cursor: pointer;
+  display: block;
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.happening-footer a:hover {
+  background-color: var(--greys);
 }
 
 /* COMMON */
