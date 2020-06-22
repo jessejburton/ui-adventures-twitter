@@ -102,10 +102,6 @@ body {
   background: var(--blues);
 }
 
-.btn.tweet {
-  width: 20rem;
-}
-
 .profile-container {
   display: flex;
   justify-content: space-between;
@@ -139,7 +135,7 @@ body {
 }
 
 .profile-container .profile__name span {
-  color: var(--grey);
+  color: var(--greytext);
 }
 
 .profile-container .arrow {
@@ -217,11 +213,6 @@ body {
 .tweet-icons {
   font-size: 1.8rem;
   display: flex;
-}
-
-.tweet-buttons .btn {
-  font-size: 1.6rem;
-  letter-spacing: .5px;
 }
 
 .tweets {
@@ -393,6 +384,10 @@ main a {
   left: 2rem;
 }
 
+.whats-happening {
+  margin-bottom: 1.5rem;
+}
+
 .whats-happening h4 {
   background-color: var(--grey);
   padding: 1rem 1.2rem;
@@ -422,16 +417,39 @@ main a {
   color: var(--greytext);
 }
 
-.happening .text {
+.happening .text,
+.happening .profile-name a {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.8rem;
   padding: .3rem 0;
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+.happening .profile-name a:hover {
+  text-decoration: underling;
 }
 
-.happening .sub-meta {
+.happening .sub-meta,
+.happening .profile-name a + a {
+  font-weight: 400;
   font-size: 1.5rem;
   color: var(--greytext);
+}
+
+.happening-profile {
+  display: flex;
+}
+
+.happening-profile img.profile-image {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-right: 1.6rem;
+}
+
+.happening-profile .profile-name {
+
 }
 
 .happening-left {
@@ -467,6 +485,25 @@ main a {
   background-color: var(--greys);
 }
 
+.sidebar__footer {
+  font-size: 1.3rem;
+  padding-left: 1rem;
+}
+
+.sidebar__footer,
+.sidebar__footer a {
+  color: var(--greytext);
+}
+
+.sidebar__footer a {
+  text-decoration: none;
+  margin-right: .5rem;
+}
+
+.sidebar__footer div + div {
+  margin-top: 1rem;
+}
+
 /* COMMON */
 .btn {
   border: none;
@@ -476,10 +513,27 @@ main a {
   border-radius: 2.5rem;
   font-weight: 600;
   font-size: 1.4rem;
+  letter-spacing: 1px;
 
   cursor: pointer;
   transition: background-color .3s ease;
 }
+
+.btn--inverted {
+  padding: 1rem 1.5rem;
+  color: var(--blue);
+  background-color: white;
+  font-weight: 600;
+  border: 1px solid var(--blue);
+}
+
+.btn--tweet {
+  width: 20rem;
+}
+.btn--tweet svg {
+  display: none;
+}
+
 
 .btn:disabled {
   opacity: .6;
@@ -487,6 +541,10 @@ main a {
 
 .btn:not(:disabled):hover {
   background-color: var(--blued);
+}
+
+.btn.btn--inverted:hover {
+  background-color: var(--blues);
 }
 
 a.hover-link {
@@ -508,4 +566,60 @@ img.profile-image {
   height: 5rem;
   object-fit: contain;
   border-radius: 50%;
+  cursor: pointer;
+  transition: filter .3s ease;
+}
+
+img.profile-image:hover {
+  filter: brightness(0.86);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1260px){
+  .wrapper {
+    justify-content: center;
+    width: auto;
+  }
+  .navigation {
+    flex: 0;
+    margin-right: 2rem;
+  }
+  .navigation ul li a span {
+    display: none;
+  }
+
+  .btn--tweet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+  }
+  .btn--tweet svg {
+    display: block;
+  }
+  .btn--tweet span {
+    display: none;
+  }
+
+  .profile-container {
+    justify-content: center;
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  .profile-container .profile img {
+    margin-right: 0;
+  }
+  .profile-container .profile__name,
+  .profile-container .arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1170px){
+  .sidebar {
+    display: none;
+  }
 }
