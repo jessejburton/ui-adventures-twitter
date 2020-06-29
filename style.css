@@ -21,7 +21,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* 10px */
 }
 
 body {
@@ -514,12 +514,14 @@ main a {
   font-weight: 600;
   font-size: 1.4rem;
   letter-spacing: 1px;
+  outline: none;
 
   cursor: pointer;
   transition: background-color .3s ease;
 }
 
-.btn--inverted {
+.btn--inverted,
+.btn--follow:not(.following) {
   padding: 1rem 1.5rem;
   color: var(--blue);
   background-color: white;
@@ -534,7 +536,6 @@ main a {
   display: none;
 }
 
-
 .btn:disabled {
   opacity: .6;
 }
@@ -543,8 +544,18 @@ main a {
   background-color: var(--blued);
 }
 
-.btn.btn--inverted:hover {
+.btn.btn--inverted:hover,
+.btn--follow:not(.following):hover {
   background-color: var(--blues);
+}
+
+.btn--follow {
+  padding: 1rem 1.5rem;
+  transition: background-color .2s linear;
+}
+
+.btn--follow.following:not(.first):hover {
+  background-color: #CA2055;
 }
 
 a.hover-link {
@@ -618,8 +629,88 @@ img.profile-image:hover {
   }
 }
 
+/* POPUP */
+.popup {
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  width: 320px;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  border: 1px solid var(--greys);
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+  font-size: 1.4rem;
+}
+
+.popup .popup__text p {
+  margin: 1rem 0;
+}
+
+.popup a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.popup header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup .popup__text {
+  padding: 0.5rem 3rem 1rem 0;
+}
+
+.popup .popup__name {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.popup .popup__name a:hover {
+  text-decoration: underline;
+}
+
+.popup .popup__meta {
+  font-size: 1.3rem;
+  color: var(--greytext);
+}
+
+.popup .follows {
+  background-color: var(--greys);
+  padding: 0 .5rem;
+}
+
+.popup .popup__following {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup .popup__following {
+  font-size: 1.3rem;
+  color: var(--greytext);
+}
+
+.popup .popup__following strong {
+  color: var(--black);
+}
+
+.popup footer {
+  padding-right: 3rem;
+  font-size: 1.3rem;
+  color: var(--greytext);
+}
+
+
 @media screen and (max-width: 1170px){
   .sidebar {
     display: none;
+  }
+}
+
+@media screen and (max-width: 800px){
+  html {
+    font-size: 50%;
   }
 }
