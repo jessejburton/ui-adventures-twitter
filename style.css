@@ -632,8 +632,9 @@ img.profile-image:hover {
 /* POPUP */
 .popup {
   position: absolute;
-  top: 200px;
-  left: 800px;
+  opacity: 0;
+  pointer-events: none;
+  left: -5000px;
   width: 320px;
   padding: 2rem;
   background-color: var(--white);
@@ -641,6 +642,7 @@ img.profile-image:hover {
   border: 1px solid var(--greys);
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
   font-size: 1.4rem;
+  transition: opacity .5s ease;
 }
 
 .popup .popup__text p {
