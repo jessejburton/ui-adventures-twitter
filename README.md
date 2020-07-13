@@ -1,3 +1,13 @@
+### BEM
+Originally we were going to use BEM Block Element Modifier
+  .button // BLOCK
+  .button__text // ELEMENT
+  .button--inverted // MODIFIER
+
+Instead! We are going Classless! Using a minimal class CSS approach
+
+- Style elements based on their element type
+
 # Setup
 
 ## FONTS

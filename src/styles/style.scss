@@ -1,0 +1,160 @@
+:root {
+  /* COLORS BY NAME */
+  --white: #FFFFFF;
+  --black: #000000;
+  --blue-1: #E8F5FE;
+  --blue-2: #1DA1F2;
+  --blue-3: #1176b4;
+  --grey-1: #F5F8FA;
+  --grey-2: #EDF0F2;
+  --grey-3: #84939F;
+  --green-1: #e7f9ef;
+  --green-2: #31c674;
+  --red-1: #fae6ec;
+  --red-2: #e0245e;
+
+  /* COLORS BY USE */
+  --primaryLight: var(--blue-1);
+  --primary: var(--blue-2);
+  --primaryDark: var(--blue-3);
+
+  /* SIZING */
+  --space-1: 2.5rem;
+  --space-2: 4rem;
+
+  --columnGap: var(--space-2);
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
+  background-color: var(--white);
+}
+
+body > div {
+  width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 600px 350px;
+  column-gap: var(--columnGap);
+}
+
+aside[name=left-sidebar]{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 2.6rem;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      margin-bottom: 0.5rem;
+      color: inherit;
+      font-weight: 600;
+      border-radius: 2.5rem;
+
+      &:first-child {
+        color: var(--primary)!important;
+      }
+
+      * {
+        display: block;
+      }
+
+      span {
+        font-size: 1.6rem;
+        margin-left: 1rem;
+      }
+
+      &:hover {
+        background-color: var(--primaryLight);
+      }
+
+      &:hover,
+      &.active {
+        color: var(--primary);
+      }
+    }
+
+    button {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  footer {
+    margin-bottom: 2rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 2.5rem;
+      padding: 0.8rem 1.5rem;
+
+      img {
+        max-width: 4rem;
+        margin-right: 1rem;
+      }
+
+      > div {
+        display: flex;
+      }
+
+      &:hover {
+        background-color: var(--primaryLight);
+      }
+    }
+  }
+}
+
+.rounded-image {
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: contain;
+  max-width: 5rem;
+}
+
+button {
+  border: none;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1em 1.5em;
+  cursor: pointer;
+  border-radius: 2.5rem;
+
+  &:hover {
+    background-color: var(--primaryDark);
+  }
+}
+
+
+
+
+
+
+
+.popup {
+  display: none;
+}

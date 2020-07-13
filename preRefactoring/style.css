@@ -520,6 +520,8 @@ main a {
   transition: background-color .3s ease;
 }
 
+
+
 .btn--inverted,
 .btn--follow:not(.following) {
   padding: 1rem 1.5rem;
