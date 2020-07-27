@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors Demo</title>
+
+  <style type="text/css">
+    html {
+      font-size: 62.5%;
+      /* 62.5% of 16px is 10px */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 1.6rem;
+    }
+
+    /* BEM */
+    section.tweets {
+      padding: 50px;
+    }
+
+    section article.tweet {
+      max-width: 50vw;
+      border: 1px solid #353535;
+    }
+
+    section article.tweet:hover {
+      background-color: #f9f9f9;
+    }
+
+    article.tweet .tweet-split {
+      display: flex;
+    }
+
+    article.tweet .tweet__image {
+      width: 8rem;
+      text-align: center;
+      padding-top: 3rem;
+    }
+
+    article.tweet .tweet__content {
+      padding: 1.5rem 1.5rem 1.5rem 0;
+      /*
+        same as
+        padding-top: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 0;
+      */
+    }
+
+    article.tweet .tweet__content-retweet {
+      color: #686868;
+      font-size: 0.9em;
+      transform: translateX(-1rem);
+      display: block;
+    }
+
+    article.tweet .tweet__content-name {
+      padding-top: 0.5rem;
+      color: #686868;
+      display: block;
+    }
+
+    article.tweet .tweet__content-name strong {
+      color: black;
+    }
+
+    article.tweet .tweet__content p {
+      margin: 1rem 0;
+    }
+
+    article.tweet .tweet__content footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      wdith: 100%;
+    }
+
+    article.tweet .tweet__more:hover {
+      background-color: #686868;
+    }
+
+    article.tweet .tweet__more .tweet__image {
+      padding: 1rem 0;
+    }
+
+    article.tweet .tweet__more .rounded-image {
+      max-width: 4rem;
+    }
+
+    article.tweet .tweet__more {
+      align-items: center;
+    }
+
+    /* Minimal Class CSS */
+    section[name=tweets] {
+      padding: 50px;
+    }
+
+    section article {
+      max-width: 50vw;
+      border: 1px solid #353535;
+    }
+
+    section article:hover {
+      background-color: #f9f9f9;
+    }
+
+    section[name=tweets] article>div,
+    section[name=tweets] article>footer {
+      display: flex;
+    }
+
+    section[name=tweets] article>footer {
+      align-items: center;
+    }
+
+    section[name=tweets] article>footer:hover {
+      background-color: #686868;
+    }
+
+    section[name=tweets] article>footer .rounded-image {
+      max-width: 4rem;
+    }
+
+    section[name=tweets] article>div div.tweet__image,
+    section[name=tweets] article>footer div.tweet__image {
+      padding: 2.5rem 0;
+      width: 8rem;
+      text-align: center;
+    }
+
+    section[name=tweets] article>footer div.tweet__image {
+      padding: 1rem 0;
+    }
+
+    section[name=tweets] article .tweet__content {
+      padding: 1.5rem 1.5rem 1.5rem 0;
+    }
+
+    section[name=tweets] article .tweet__content p {
+      margin: 1rem 0;
+    }
+
+    section[name=tweets] article .tweet__content header {
+      padding-bottom: 0.5rem;
+    }
+
+    section[name=tweets] article .tweet__content header span {
+      display: block;
+      color: #686868;
+    }
+
+    section[name=tweets] article .tweet__content header span:first-child {
+      transform: translateX(-1rem);
+      font-size: 0.9em;
+      padding-bottom: 1rem;
+    }
+
+    section[name=tweets] article .tweet__content header span strong {
+      color: black;
+    }
+
+    section[name=tweets] article .tweet__content footer {
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+    /* Shared */
+    .rounded-image {
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: contain;
+      max-width: 5rem;
+      cursor: pointer;
+      transition: filter .4s ease;
+    }
+
+    .rounded-image:hover {
+      filter: brightness(0.86);
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Minimal Class CSS -->
+  <section name="tweets">
+
+    <article>
+      <div>
+        <div class="tweet__image">
+          <img class="rounded-image" src="https://placebeard.it/320x320" alt="Jesse James Burton" />
+        </div>
+        <div class="tweet__content">
+          <header>
+            <span>John Doe Retweeted</span>
+            <span>
+              <strong>Jesse J Burton</strong> @BurtonMedia .9m
+            </span>
+          </header>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore enim, quis natus cum autem aperiam est.
+            </p>
+          </div>
+          <footer>
+            <a href="#">A</a>
+            <a href="#">B</a>
+            <a href="#">C</a>
+            <a href="#">D</a>
+          </footer>
+        </div>
+      </div>
+      <footer>
+        <div class="tweet__image">
+          <img class="rounded-image" src="https://placebeard.it/320x320" alt="Jesse James Burton" />
+        </div>
+        <div>
+          <a href="#">Show More</a>
+        </div>
+      </footer>
+    </article>
+
+  </section>
+
+  <!-- BEM methodolgy (Block Element Model) -->
+  <section class="tweets">
+
+    <article class="tweet">
+      <div class="tweet-split">
+        <div class="tweet__image">
+          <img class="rounded-image" src="https://placebeard.it/320x320" alt="Jesse James Burton" />
+        </div>
+        <div class="tweet__content">
+          <header>
+            <span class="tweet__content-retweet">John Doe Retweeted</span>
+            <span class="tweet__content-name">
+              <strong>Jesse J Burton</strong> @BurtonMedia .9m
+            </span>
+          </header>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore enim, quis natus cum autem aperiam est.
+            </p>
+          </div>
+          <footer>
+            <a href="#">A</a>
+            <a href="#">B</a>
+            <a href="#">C</a>
+            <a href="#">D</a>
+          </footer>
+        </div>
+      </div>
+      <div class="tweet__more tweet-split">
+        <div class="tweet__image">
+          <img class="rounded-image" src="https://placebeard.it/320x320" alt="Jesse James Burton" />
+        </div>
+        <div class="tweet__content">
+          <a href="#">Show More</a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+</body>
+
+</html>
